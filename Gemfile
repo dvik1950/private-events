@@ -11,6 +11,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem "bulma-rails", "~> 0.7.1" #bulma rails
+gem "font-awesome-rails" #
+
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
