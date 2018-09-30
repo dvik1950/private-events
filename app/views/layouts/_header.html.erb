@@ -1,17 +1,17 @@
 <header>
-  <nav class="navbar">
+  <nav class="navbar is-link">
 <!--  <div class="navbar">-->
     <div class="navbar-menu">
       <div class="navbar-start">
-        <%= link_to image_tag("private-events-logo.png", width: "68", height: "68"), root_path, class: "navbar-item" %>
+        <%= link_to "Private events", root_path, class: "navbar-item is-large" %>
         <%= link_to "Home", root_path, class: "navbar-item"  %>
-        <%= link_to "About", root_path, class: "navbar-item"  %>
+        <%= link_to "About", about_path, class: "navbar-item"  %>
       </div>
+
       <div class="navbar-end">
       <%= link_to "Sign In", root_path, class: "navbar-item" %>
       </div>
 
     </div>
   </nav>
-<!--  </div>-->
 </header>
