@@ -1,5 +1,7 @@
 .main {
+  padding-top: 5vh;
   min-height: 80vh;
+  z-index: 1;
 
   img {
     padding-bottom: 3vh;
@@ -11,8 +13,7 @@
 }
 
 
-.navbar {
-  margin-bottom: 5vh;
-
+.notice{
+  z-index: 5;
 }
 

@@ -1,0 +1,17 @@
+
+<h1 class="title">Sign In</h1>
+
+  <div class="field">
+    <div class="control">
+      <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :email, "Please enter your email address below:", class: "label subtitle"%>
+      <%= f.email_field :email, class: "input" %>
+    </div>
+  </div>
+  <%= f.submit "Sign In", class: "button is-medium" %>
+      <% end %>
+      <br><br><br>
+  <div class="notification ">
+    <p>If you can not proceed with the sign in, please check your e-mail address again.</p>
+  </div>
+

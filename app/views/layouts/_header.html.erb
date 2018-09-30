@@ -6,12 +6,34 @@
         <%= link_to "Private events", root_path, class: "navbar-item is-large" %>
         <%= link_to "Home", root_path, class: "navbar-item"  %>
         <%= link_to "About", about_path, class: "navbar-item"  %>
-      </div>
+
+
+      <% if logged_in? %>
+
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <%= link_to current_user.name, user_path(current_user), class: "navbar-link"  %>
+          <div class="navbar-dropdown is-boxed">
+
+
+            <%= link_to "My profile", user_path(current_user), class: "navbar-item" %>
+            <%= link_to "Created events", root_path, class: "navbar-item" %>
+            <%= link_to "Invited-to events", user_path(current_user), class: "navbar-item" %>
+
+            <hr class="navbar-divider">
+            <%= link_to "Sign out", logout_path, method: :delete, class: "navbar-item" %>
+
+          </div>
+        </div>
+
+        <% else %>
 
       <div class="navbar-end">
-      <%= link_to "Sign In", root_path, class: "navbar-item" %>
+      <%= link_to "Sign In", login_path, class: "navbar-item" %>
       </div>
 
-    </div>
+      <% end %>
+      </div>
+      </div>
   </nav>
 </header>

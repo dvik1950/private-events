@@ -1,4 +1,6 @@
-<section class="hero is-link is-medium">
+<% unless logged_in? %>
+
+  <section class="hero is-link is-medium">
   <div class="hero-body ">
     <div class="container">
       <center>
@@ -7,10 +9,13 @@
         Welcome to Private Events!
       </h1>
       <h2 class="subtitle">
-        <button class="button is-danger is-large">Sign In</button>
-        <button class="button is-danger is-large">Sign Up</button>
+        <button class="button is-danger is-large"><%= link_to "Sign In", login_path %></button>
+        <button class="button is-danger is-large"><%= link_to "Sign Up", signup_path %></button>
       </h2>
       </center>
     </div>
   </div>
 </section>
+
+  <% end %>
+
