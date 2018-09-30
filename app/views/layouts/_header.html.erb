@@ -17,7 +17,7 @@
 
 
             <%= link_to "My profile", user_path(current_user), class: "navbar-item" %>
-            <%= link_to "Created events", root_path, class: "navbar-item" %>
+            <%= link_to "Created events", user_path(current_user), class: "navbar-item" %>
             <%= link_to "Invited-to events", user_path(current_user), class: "navbar-item" %>
 
             <hr class="navbar-divider">

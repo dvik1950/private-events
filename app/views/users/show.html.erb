@@ -6,3 +6,29 @@
     </div>
   </div>
 </div>
+
+<br><br>
+
+<h1 class="title">Events created by <%= @user.name %></h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Event name</th>
+    <th>Event date</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @user.created_events.each do |e| %>
+  <tr>
+    <td><%= link_to e.name, event_path(e.id)%></td>
+    <td><%=e.held_on%></td>
+    <td><%="unknown"%></td>
+
+
+  </tr>
+    <% end %>
+</tbody>
+</table>
