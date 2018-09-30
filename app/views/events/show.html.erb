@@ -3,3 +3,24 @@
 <br><br>
 <h1 class="title">About the event:</h1>
 <h1 class="subtitle"><%= @event.description %></h1>
+
+<br><br>
+<h1 class="title">Guests:
+</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @event.attendees.each do |a|%>
+    <tr>
+      <td><%= link_to a.name, user_path(a.id)%></td>
+      <td><%=a.email%></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
