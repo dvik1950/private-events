@@ -3,8 +3,6 @@ class AppearencesController < ApplicationController
     @appearence = Appearence.new
   end
 
-  def create
 
-  end
 
 end

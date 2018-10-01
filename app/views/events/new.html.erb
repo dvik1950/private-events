@@ -14,5 +14,14 @@
     </div>
   </div>
 
+  <div class="field">
+    <div class="control">
+      <%= f.label :held_on, class: "label" %>
+      <%= f.date_select :held_on, class: "input" %>
+    </div>
+  </div>
+
+
+
   <%= f.submit "Create the event", class: "button is-medium" %>
 <% end %>

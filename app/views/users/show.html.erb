@@ -46,7 +46,7 @@
   </thead>
 
   <tbody>
-  <% @user.attending_events.each do |e| %>
+  <% @past_events.each do |e| %>
     <tr>
       <td><%= link_to e.name, event_path(e.id)%></td>
       <td><%=e.held_on%></td>
