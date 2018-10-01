@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
-scope :past, -> {where('held_on > ?', DateTime.now)}
-scope :upcoming, -> {where('held_on < ?', DateTime.now)}
+scope :past, -> {where('held_on < ?', DateTime.now)}
+scope :upcoming, -> {where('held_on > ?', DateTime.now)}
 
   belongs_to :creator, :class_name => 'User'
 

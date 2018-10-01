@@ -1,23 +1,51 @@
+<h1 class="title">Past events:</h1>
 
+<table class="table">
+  <thead>
+  <tr>
+    <th>Event name</th>
+    <th>Event date</th>
+    <th>Location</th>
+  </tr>
+  </thead>
 
-  <table class="table">
-    <thead>
+  <tbody>
+  <% @events.past.each do |e| %>
     <tr>
-      <th>Event name</th>
-      <th>Event date</th>
-      <th>Location</th>
+      <td><%= link_to e.name, event_path(e.id)%></td>
+      <td><%=e.held_on%></td>
+      <td><%="unknown"%></td>
+
+
     </tr>
-    </thead>
-
-    <tbody>
-    <% @events.each do |e| %>
-      <tr>
-        <td><%= link_to e.name, event_path(e.id)%></td>
-        <td><%=e.held_on%></td>
-        <td><%="unknown"%></td>
+  <% end %>
+  </tbody>
+</table>
 
 
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
+<br><br>
+
+<h1 class="title">Upcoming events:</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Event name</th>
+    <th>Event date</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @events.upcoming.each do |e| %>
+    <tr>
+      <td><%= link_to e.name, event_path(e.id)%></td>
+      <td><%=e.held_on%></td>
+      <td><%="unknown"%></td>
+
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
