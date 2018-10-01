@@ -12,8 +12,13 @@
   }
 }
 
+footer {
+  border-top: 1px solid lightgray;
+  padding-bottom: 0 !important;
 
-.notice{
-  z-index: 5;
+}
+
+header {
+  border-bottom: 1px solid darkblue;
 }
 

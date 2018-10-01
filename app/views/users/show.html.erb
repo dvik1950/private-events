@@ -32,3 +32,62 @@
     <% end %>
 </tbody>
 </table>
+
+<br><br>
+<h1 class="title"><%= @user.name %>'s past events:</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Event name</th>
+    <th>Event date</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @user.attending_events.each do |e| %>
+    <tr>
+      <td><%= link_to e.name, event_path(e.id)%></td>
+      <td><%=e.held_on%></td>
+      <td><%="unknown"%></td>
+
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<br><br>
+
+<h1 class="title"><%= @user.name %>'s upcoming events:</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Event name</th>
+    <th>Event date</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @upcoming_events.each do |e| %>
+    <tr>
+      <td><%= link_to e.name, event_path(e.id)%></td>
+      <td><%=e.held_on%></td>
+      <td><%="unknown"%></td>
+
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br><br>
+<div class="notification">
+  Creating an event doesn't necessarily include attendance to the event.
+</div>
+
+<br><br>

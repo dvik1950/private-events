@@ -17,8 +17,8 @@
 
 
             <%= link_to "My profile", user_path(current_user), class: "navbar-item" %>
-            <%= link_to "Created events", user_path(current_user), class: "navbar-item" %>
-            <%= link_to "Invited-to events", user_path(current_user), class: "navbar-item" %>
+            <%= link_to "Create a new event", new_event_path, class: "navbar-item" %>
+            <%= link_to "All events", events_path, class: "navbar-item" %>
 
             <hr class="navbar-divider">
             <%= link_to "Sign out", logout_path, method: :delete, class: "navbar-item" %>
